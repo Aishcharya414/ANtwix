@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -8,7 +8,6 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { name: "Home", href: "#" },
   { name: "Projects", href: "#projects" },
-  { name: "Inquiry", href: "#inquiry" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -27,60 +26,77 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/60 backdrop-blur-md py-4" : "bg-transparent py-6"
+        scrolled ? "bg-black/60 backdrop-blur-md py-3 border-b border-white/10" : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            ANtwix
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="relative w-10 h-10 overflow-hidden rounded-lg flex items-center justify-center font-bold text-white text-xl bg-gradient-to-br from-[#00A3FF] to-[#A100FF]">
+              AN
+            </div>
+            <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+              ANtwix
+            </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+                className="text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-wide"
               >
                 {link.name}
               </Link>
             ))}
+            <Link
+              href="#contact"
+              className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-gray-200 transition-all transform hover:scale-105"
+            >
+              Get Started
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white"
+              className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Nav */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/90 backdrop-blur-lg border-b border-white/10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
-            <div className="px-4 pt-2 pb-6 space-y-1">
+            <div className="px-4 pt-4 pb-8 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-md"
+                  className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
+              <div className="pt-4">
+                <Link
+                  href="#contact"
+                  className="block w-full text-center px-4 py-4 bg-white text-black font-bold rounded-xl"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
