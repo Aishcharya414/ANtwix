@@ -1,62 +1,87 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, ArrowRight, MessageSquare } from "lucide-react";
 
 export default function Contact() {
-  const contactInfo = [
-    { icon: <Mail size={24} />, label: "Email", value: "hello@antwix.com", href: "mailto:hello@antwix.com" },
-    { icon: <Phone size={24} />, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: <MapPin size={24} />, label: "Location", value: "New York, NY", href: "#" },
+  const contactMethods = [
+    {
+      icon: <Phone className="text-blue-500" size={24} />,
+      label: "Call Us",
+      value1: "+94 72 499 8153",
+      value2: "+94 76 287 4257",
+      href1: "tel:+94724998153",
+      href2: "tel:+94762874257",
+    },
+    {
+      icon: <Mail className="text-purple-500" size={24} />,
+      label: "Email Us",
+      value1: "antwix.an@gmail.com",
+      href1: "mailto:antwix.an@gmail.com",
+    },
+    {
+      icon: <MessageSquare className="text-pink-500" size={24} />,
+      label: "Support",
+      value1: "Available 24/7",
+      href1: "#inquiry",
+    },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-[#050505] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+    <section id="contact" className="py-32 relative overflow-hidden bg-black border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-black mb-6"
           >
-            <h2 className="text-4xl font-bold mb-6">Let's build something <br />great together.</h2>
-            <p className="text-gray-400 mb-10 text-lg">
-              Ready to take your digital products to the next level? 
-              Reach out and let's discuss how we can help your business grow.
-            </p>
-            
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <a
-                  key={index}
-                  href={info.href}
-                  className="flex items-center gap-4 group"
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
-                    {info.icon}
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-500 uppercase tracking-wider">{info.label}</p>
-                    <p className="text-white font-medium">{info.value}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </motion.div>
+            Get In <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Touch.</span>
+          </motion.h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Ready to start your next digital project? Reach out to us through any of these 
+            channels and we'll get back to you immediately.
+          </p>
+        </div>
 
-          {/* This could be a simplified map or illustration */}
-          <div className="relative aspect-square md:aspect-auto md:h-96 rounded-3xl overflow-hidden bg-gradient-to-br from-blue-600/20 to-purple-600/20 flex items-center justify-center border border-white/10">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {contactMethods.map((method, index) => (
             <motion.div
-              animate={{ 
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.8, 0.5]
-              }}
-              transition={{ duration: 4, repeat: Infinity }}
-              className="w-32 h-32 rounded-full bg-blue-500 blur-3xl"
-            />
-            <span className="text-8xl">🚀</span>
-          </div>
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group bg-white/5 border border-white/10 p-10 rounded-[32px] hover:border-blue-500/50 transition-all duration-500"
+            >
+              <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                {method.icon}
+              </div>
+              <h3 className="text-gray-500 font-medium uppercase tracking-widest text-xs mb-4">
+                {method.label}
+              </h3>
+              <div className="space-y-2">
+                <a
+                  href={method.href1}
+                  className="block text-xl md:text-2xl font-bold text-white hover:text-blue-400 transition-colors"
+                >
+                  {method.value1}
+                </a>
+                {method.value2 && (
+                  <a
+                    href={method.href2}
+                    className="block text-xl md:text-2xl font-bold text-white hover:text-blue-400 transition-colors"
+                  >
+                    {method.value2}
+                  </a>
+                )}
+              </div>
+              <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-blue-500 group-hover:gap-4 transition-all">
+                {method.label === "Support" ? "Start Inquiry" : "Connect Now"} <ArrowRight size={16} />
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

@@ -57,8 +57,9 @@ export default function Inquiry() {
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-300 ml-1">Full Name</label>
+                <label htmlFor="fullName" className="text-sm font-semibold text-gray-300 ml-1">Full Name</label>
                 <input
+                  id="fullName"
                   required
                   type="text"
                   value={formData.name}
@@ -68,8 +69,9 @@ export default function Inquiry() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-300 ml-1">Work Email</label>
+                <label htmlFor="workEmail" className="text-sm font-semibold text-gray-300 ml-1">Work Email</label>
                 <input
+                  id="workEmail"
                   required
                   type="email"
                   value={formData.email}
@@ -82,8 +84,9 @@ export default function Inquiry() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-300 ml-1">Phone Number</label>
+                <label htmlFor="phone" className="text-sm font-semibold text-gray-300 ml-1">Phone Number</label>
                 <input
+                  id="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -92,8 +95,9 @@ export default function Inquiry() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-300 ml-1">Business Name</label>
+                <label htmlFor="business" className="text-sm font-semibold text-gray-300 ml-1">Business Name</label>
                 <input
+                  id="business"
                   type="text"
                   value={formData.business}
                   onChange={(e) => setFormData({ ...formData, business: e.target.value })}
@@ -104,8 +108,9 @@ export default function Inquiry() {
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-gray-300 ml-1">Project Details</label>
+              <label htmlFor="message" className="text-sm font-semibold text-gray-300 ml-1">Project Details</label>
               <textarea
+                id="message"
                 required
                 rows={5}
                 value={formData.message}

@@ -15,6 +15,31 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ANtwix | Modern Web Development Agency",
   description: "ANtwix designs and builds high-performance websites and applications tailored for growth. We blend cutting-edge tech with stunning design.",
+  keywords: ["web development", "nextjs", "react", "ui/ux design", "antwix", "agency"],
+  authors: [{ name: "ANtwix Team" }],
+  openGraph: {
+    title: "ANtwix | Modern Web Development Agency",
+    description: "ANtwix designs and builds high-performance websites and applications tailored for growth.",
+    url: "https://antwix.com",
+    siteName: "ANtwix",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ANtwix | Modern Web Development Agency",
+    description: "ANtwix designs and builds high-performance websites and applications tailored for growth.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +50,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-black text-white">{children}</body>
     </html>
   );
 }

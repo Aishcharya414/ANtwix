@@ -37,7 +37,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 group rounded-t-3xl">
+    <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 group rounded-t-3xl border-b border-white/5">
       <AnimatePresence>
         {isLoading && (
           <motion.div 
@@ -46,6 +46,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
             className="absolute inset-0 z-10 flex items-center justify-center bg-neutral-900"
           >
             <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+            <span className="sr-only">Loading preview of {title}</span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -56,7 +57,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
       >
         <iframe
           src={link}
-          title={title}
+          title={`Preview of ${title}`}
           className="absolute inset-0 w-[1280px] h-[800px] border-none pointer-events-none select-none"
           onLoad={() => setIsLoading(false)}
           loading="lazy"
@@ -67,7 +68,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
             height: '286%',
           }}
         />
-        <div className="absolute inset-0 bg-transparent z-20 cursor-pointer" />
+        <div className="absolute inset-0 bg-transparent z-20 cursor-pointer" aria-hidden="true" />
       </motion.div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30 flex items-end p-8">
@@ -76,8 +77,9 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 shadow-xl"
+          aria-label={`Visit ${title} website in a new tab`}
         >
-          Visit Website <ExternalLink size={18} />
+          Visit Website <ExternalLink size={18} aria-hidden="true" />
         </a>
       </div>
     </div>
