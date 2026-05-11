@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -31,9 +32,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative w-10 h-10 overflow-hidden rounded-lg flex items-center justify-center font-bold text-white text-xl bg-gradient-to-br from-[#00A3FF] to-[#A100FF]">
-              AN
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+              <Image
+                src="/logo.png"
+                alt="ANtwix Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
               ANtwix

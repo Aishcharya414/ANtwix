@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 // Custom SVG components for social icons
 const TwitterIcon = ({ size = 18 }: { size?: number }) => (
@@ -116,9 +117,14 @@ export default function Footer() {
           
           {/* Brand Identity */}
           <div className="md:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 overflow-hidden rounded-lg flex items-center justify-center font-bold text-white text-base bg-gradient-to-br from-[#00A3FF] to-[#A100FF]">
-                AN
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/logo.png"
+                  alt="ANtwix Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="text-xl font-bold tracking-tighter text-white">
                 ANtwix
