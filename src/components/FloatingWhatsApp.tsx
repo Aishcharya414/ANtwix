@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 
-const whatsappUrl = "https://wa.me/94724998153?text=Hi%20ANtwix%2C%20I%20want%20to%20chat%20about%20a%20project.";
+const whatsappUrl = "https://wa.me/94762874257?text=Hi%20ANtwix%2C%20I%20want%20to%20chat%20about%20a%20project.";
 
 function WhatsAppMark() {
   return (
@@ -27,13 +27,10 @@ export default function FloatingWhatsApp() {
         dragConstraints={boundsRef}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
-        className="pointer-events-auto absolute bottom-6 right-6 flex items-center gap-3 rounded-full bg-[#25D366] px-4 py-3 text-white shadow-[0_14px_40px_rgba(37,211,102,0.45)] ring-1 ring-white/10 backdrop-blur-md"
+        className="pointer-events-auto absolute bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full text-[#25D366] shadow-[0_10px_25px_rgba(0,0,0,0.25)] cursor-grab active:cursor-grabbing"
         aria-label="Message us on WhatsApp"
       >
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15">
-          <WhatsAppMark />
-        </span>
-        {/* <span className="hidden sm:block text-sm font-semibold tracking-wide">Chat on WhatsApp</span> */}
+        <WhatsAppMark />
       </motion.a>
     </div>
   );

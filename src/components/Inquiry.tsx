@@ -65,7 +65,7 @@ export default function Inquiry() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all text-white placeholder-gray-600"
-                  placeholder="John Doe"
+                  placeholder="Enter your full name"
                 />
               </div>
               <div className="space-y-2">
@@ -77,7 +77,7 @@ export default function Inquiry() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all text-white placeholder-gray-600"
-                  placeholder="john@company.com"
+                  placeholder="example@company.com"
                 />
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function Inquiry() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all text-white placeholder-gray-600"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="000-000-0000"
                 />
               </div>
               <div className="space-y-2">
@@ -102,7 +102,7 @@ export default function Inquiry() {
                   value={formData.business}
                   onChange={(e) => setFormData({ ...formData, business: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-blue-500 transition-all text-white placeholder-gray-600"
-                  placeholder="ANtwix Ltd."
+                  placeholder="Example Ltd."
                 />
               </div>
             </div>
