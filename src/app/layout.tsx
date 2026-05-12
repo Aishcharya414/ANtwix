@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     description: "ANtwix designs and builds high-performance websites and applications tailored for growth.",
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo-removebg.png",
+    shortcut: "/logo-removebg.png",
+    apple: "/logo-removebg.png",
   },
   manifest: "/manifest.json",
   robots: {
