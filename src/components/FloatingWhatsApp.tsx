@@ -27,7 +27,7 @@ export default function FloatingWhatsApp() {
         dragConstraints={boundsRef}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.98 }}
-        className="pointer-events-auto absolute bottom-6 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_16px_35px_rgba(37,211,102,0.45)] ring-4 ring-white/90 cursor-grab active:cursor-grabbing"
+        className="pointer-events-auto absolute bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_16px_35px_rgba(37,211,102,0.45)] ring-4 ring-white/90 cursor-grab active:cursor-grabbing"
         aria-label="Message us on WhatsApp"
       >
         <WhatsAppMark />
