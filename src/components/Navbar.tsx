@@ -33,9 +33,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+            <div className="relative w-20 h-20 transition-transform duration-300 group-hover:scale-110">
               <Image
-                src="/logo.png"
+                src="/logo-removebg.png"
                 alt="ANtwix Logo"
                 fill
                 className="object-contain"

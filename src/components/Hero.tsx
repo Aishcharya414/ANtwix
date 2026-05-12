@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="relative w-24 h-24 md:w-32 md:h-32">
             <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full animate-pulse" />
             <Image
-              src="/logo.png"
+              src="/logo-removebg.png"
               alt="ANtwix"
               fill
               className="object-contain relative z-10"

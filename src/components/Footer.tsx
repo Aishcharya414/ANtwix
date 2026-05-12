@@ -118,9 +118,9 @@ export default function Footer() {
           {/* Brand Identity */}
           <div className="md:col-span-2 space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-8 h-8">
+              <div className="relative w-20 h-20">
                 <Image
-                  src="/logo.png"
+                  src="/logo-removebg.png"
                   alt="ANtwix Logo"
                   fill
                   className="object-contain"
