@@ -30,6 +30,13 @@ export async function POST(req: Request) {
     return NextResponse.json(data);
   } catch (error: any) {
     console.error("Resend API Error:", error);
-    return NextResponse.json({ error: error.message || "Failed to send email" }, { status: 500 });
+    console.error("Full error details:", JSON.stringify(error, null, 2));
+    return NextResponse.json(
+      { 
+        error: error.message || "Failed to send email",
+        details: process.env.NODE_ENV === "development" ? error : undefined
+      }, 
+      { status: 500 }
+    );
   }
 }
