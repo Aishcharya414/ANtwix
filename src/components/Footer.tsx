@@ -4,23 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Custom SVG components for social icons
-const TwitterIcon = ({ size = 18 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2s9 5 20 5a9.5 9.5 0 0 0-9-5.5c4.75 2.25 7-7 7-7" />
+const WhatsAppIcon = ({ size = 18 }: { size?: number }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width={size} height={size}>
+    <path d="M19.05 4.93A9.94 9.94 0 0 0 12.02 2C6.49 2 2 6.49 2 12.02c0 1.76.46 3.48 1.33 4.99L2 22l5.14-1.3a10 10 0 0 0 4.88 1.24h.01c5.53 0 10.02-4.49 10.02-10.02 0-2.68-1.04-5.2-2.95-7.01Zm-7.03 15.41h-.01a8.3 8.3 0 0 1-4.24-1.16l-.3-.17-3.05.77.81-2.97-.19-.31a8.28 8.28 0 0 1-1.27-4.45c0-4.58 3.73-8.31 8.32-8.31 2.22 0 4.31.86 5.88 2.44a8.25 8.25 0 0 1 2.45 5.88c0 4.59-3.73 8.28-8.4 8.28Zm4.57-6.2c-.25-.13-1.45-.72-1.68-.8-.22-.08-.39-.13-.55.13-.16.25-.63.8-.77.97-.14.17-.28.19-.53.06-.25-.13-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.39.11-.52.11-.11.25-.28.38-.42.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.55-1.33-.75-1.82-.2-.48-.41-.42-.55-.42h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09 0 1.23.9 2.42 1.03 2.59.13.17 1.77 2.71 4.29 3.8.6.26 1.07.42 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.45-.59 1.65-1.15.2-.56.2-1.04.14-1.15-.06-.11-.22-.17-.47-.3Z" />
   </svg>
 );
 
-const LinkedinIcon = ({ size = 18 }: { size?: number }) => (
+const TikTokIcon = ({ size = 18 }: { size?: number }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -32,26 +22,7 @@ const LinkedinIcon = ({ size = 18 }: { size?: number }) => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect x="2" y="9" width="4" height="12" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
-const GithubIcon = ({ size = 18 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-    <path d="M9 18c-4.51 2-5-2-7-2" />
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
   </svg>
 );
 
@@ -94,10 +65,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <TwitterIcon size={18} />, href: "#", label: "Twitter" },
-    { icon: <LinkedinIcon size={18} />, href: "#", label: "LinkedIn" },
-    { icon: <GithubIcon size={18} />, href: "#", label: "GitHub" },
-    { icon: <InstagramIcon size={18} />, href: "#", label: "Instagram" },
+    { icon: <WhatsAppIcon size={18} />, href: "https://wa.me/94762874257", label: "WhatsApp" },
+    { icon: <InstagramIcon size={18} />, href: "https://www.instagram.com/antwix.an?igsh=OTY5ZnQwdnF2OXRk", label: "Instagram" },
+    { icon: <TikTokIcon size={18} />, href: "https://www.tiktok.com/@antwix.an?_r=1&_t=ZS-96K1ikKcOrE", label: "TikTok" },
   ];
 
   const quickLinks = [
@@ -150,7 +120,7 @@ export default function Footer() {
 
           {/* Quick Nav */}
           <div>
-            <h4 className="text-white font-bold mb-6">Navigation</h4>
+            <h4 className="text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
