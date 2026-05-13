@@ -11,7 +11,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    const resend = new Resend(process.env.re_aBJcgR4q_8P2bEGgihTzGUbVo8AtCpEtD);
     const { name, email, phone, business, message } = await req.json();
 
     const data = await resend.emails.send({
