@@ -12,17 +12,17 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "NSJ Group",
+    title: "Company Website - NSJ Group",
     description: "A comprehensive corporate presence for NSJ Group, showcasing their diverse service range.",
     link: "https://www.nsjgroup.com.au/",
   },
   {
-    title: "Potted Plant SL",
+    title: "Ecommerce Website - Potted Plant SL",
     description: "An elegant e-commerce experience for plant enthusiasts with a focus on minimalist design.",
     link: "https://potted-plant-sl.vercel.app/",
   },
   {
-    title: "Wedding Website",
+    title: "Wedding Memo Upload Website",
     description: "A beautiful, personalized digital invitation and story-telling platform for couples.",
     link: "https://adisha-deshani.vercel.app/",
   },
