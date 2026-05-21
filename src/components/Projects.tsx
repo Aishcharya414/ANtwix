@@ -22,7 +22,7 @@ const projects: Project[] = [
     link: "https://potted-plant-sl.vercel.app/",
   },
   {
-    title: "Wedding Memo Upload Website",
+    title: "Wedding Photos Upload Website",
     description: "A beautiful, personalized digital invitation and story-telling platform for couples.",
     link: "https://adisha-deshani.vercel.app/",
   },
