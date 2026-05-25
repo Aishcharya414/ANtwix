@@ -12,6 +12,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Edx Academy",
+    description: "A comprehensive student portal for online tutoring in Economics, Business Studies, Accounting, and Commerce with flexible monthly and daily payment options.",
+    link: "https://student-access-portal.vercel.app/",
+  },
+  {
     title: "NSJ Group",
     description: "A comprehensive corporate presence for NSJ Group, showcasing their diverse service range.",
     link: "https://www.nsjgroup.com.au/",
