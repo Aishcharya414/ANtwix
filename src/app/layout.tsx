@@ -14,21 +14,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ANtwix | Modern Web Development Agency",
+  title: "ANtwix Technologies| Modern Web Developers",
   description: "ANtwix designs and builds high-performance websites and applications tailored for growth. We blend cutting-edge tech with stunning design.",
   keywords: ["web development", "nextjs", "react", "ui/ux design", "antwix", "agency"],
   authors: [{ name: "ANtwix Team" }],
   openGraph: {
-    title: "ANtwix | Modern Web Development Agency",
+    title: "ANtwix Technologies| Modern Web Developers",
     description: "ANtwix designs and builds high-performance websites and applications tailored for growth.",
-    url: "https://antwix.com",
+    url: "https://antwix.lk",
     siteName: "ANtwix",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANtwix | Modern Web Development Agency",
+    title: "ANtwix Technologies| Modern Web Developers",
     description: "ANtwix designs and builds high-performance websites and applications tailored for growth.",
   },
   icons: {
