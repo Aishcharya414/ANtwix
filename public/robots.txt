@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://antwix.com/sitemap.xml
+Sitemap: https://antwix.lk/sitemap.xml
