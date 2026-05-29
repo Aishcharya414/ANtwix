@@ -2,12 +2,5 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "devCommand": "next dev",
-  "framework": "nextjs",
-  "redirects": [
-    {
-      "source": "/sitemap.xml",
-      "destination": "/api/sitemap.xml",
-      "permanent": true
-    }
-  ]
+  "framework": "nextjs"
 }
