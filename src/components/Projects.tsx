@@ -12,6 +12,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Lanka Hands To Hearts - Souvenir Creations",
+    description: "A vibrant products preview platform for Lanka Hands To Hearts, showcasing their unique souvenir creations with a focus on user experience and visual appeal.",
+    link: "https://lanka-hands-to-hearts.vercel.app/",
+  },
+  {
     title: "Edx Academy",
     description: "A comprehensive student portal for online tutoring in Economics, Business Studies, Accounting, and Commerce with flexible monthly and daily payment options.",
     link: "https://student-access-portal.vercel.app/",
