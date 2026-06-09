@@ -74,7 +74,7 @@ export default function Footer() {
     { name: "Home", href: "#" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-    { name: "Inquiry", href: "#inquiry" },
+    { name: "Get a Quote", href: "#inquiry" },
   ];
 
   return (

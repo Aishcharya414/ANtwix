@@ -58,10 +58,10 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#contact"
+              href="#inquiry"
               className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-gray-200 transition-all transform hover:scale-105"
             >
-              Get Started
+              Get a Quote
             </Link>
           </div>
 
@@ -97,11 +97,11 @@ export default function Navbar() {
               ))}
               <div className="pt-4">
                 <Link
-                  href="#contact"
+                  href="#inquiry"
                   className="block w-full text-center px-4 py-4 bg-white text-black font-bold rounded-xl"
                   onClick={() => setIsOpen(false)}
                 >
-                  Contact Us
+                  Get a Quote
                 </Link>
               </div>
             </div>
