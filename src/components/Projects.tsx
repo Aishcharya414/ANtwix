@@ -12,6 +12,16 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Kadawatha City Directory – Find Places in Kadawatha, Sri Lanka",
+    description: "A comprehensive directory for Kadawatha, Sri Lanka, providing users with an easy way to find local businesses, services, and points of interest.",
+    link: "https://www.kadawathacity.lk/",
+  },
+  {
+    title: "Company Website - Astral Calidad Solution",
+    description: "A comprehensive corporate presence for Astral Calidad Solution, showcasing their diverse service range.",
+    link: "https://www.astralcalidad.com.au/",
+  },
+  {
     title: "Ragama City Directory – Find Places in Ragama, Sri Lanka",
     description: "A comprehensive directory for Ragama, Sri Lanka, providing users with an easy way to find local businesses, services, and points of interest.",
     link: "https://www.ragamacity.lk/",
