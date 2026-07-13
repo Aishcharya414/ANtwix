@@ -12,6 +12,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Portfolio & Rate Card Platform - itsmechamith",
+    description: "Built for content creator Chamith Dananjaya using React, Vite, Tailwind CSS, and Supabase. Includes role-based access control, RLS policies, Supabase Storage for media uploads, and an admin console for managing portfolio items, brand logos, and rate card packages.",
+    link: "https://www.itsmechamith.lk/",
+  },
+  {
     title: "Kadawatha City Directory – Find Places in Kadawatha, Sri Lanka",
     description: "A comprehensive directory for Kadawatha, Sri Lanka, providing users with an easy way to find local businesses, services, and points of interest.",
     link: "https://www.kadawathacity.lk/",
