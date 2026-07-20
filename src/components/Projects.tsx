@@ -64,26 +64,14 @@ const projects: Project[] = [
 ];
 
 const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
-  const [shouldLoadPreview, setShouldLoadPreview] = useState(false);
+  
   const [isLoading, setIsLoading] = useState(true);
 
-  const loadPreview = () => {
-    if (!shouldLoadPreview) {
-      setShouldLoadPreview(true);
-    }
-  };
-
   return (
-    <div
-      className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 group rounded-t-3xl border-b border-white/5"
-      onMouseEnter={loadPreview}
-      onFocusCapture={loadPreview}
-      onTouchStart={loadPreview}
-      tabIndex={0}
-      aria-label={`Project preview for ${title}`}
-    >
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-900 group rounded-t-3xl border-b border-white/5">
+
       <AnimatePresence>
-        {shouldLoadPreview && isLoading && (
+        {isLoading && (
           <motion.div 
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -94,22 +82,11 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {!shouldLoadPreview && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-800 text-center px-6">
-          <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-blue-400/80 mb-3">Preview</p>
-            <p className="text-lg font-semibold text-white">Hover to load live site</p>
-            <p className="mt-2 text-sm text-neutral-400">This keeps the page fast until you interact with the card.</p>
-          </div>
-        </div>
-      )}
       
       <motion.div
         whileHover={{ scale: 1.05 }}
         className="w-full h-full relative"
       >
-        {shouldLoadPreview && (
           <iframe
             src={link}
             title={`Preview of ${title}`}
@@ -123,7 +100,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
               height: '286%',
             }}
           />
-        )}
+          
         <div className="absolute inset-0 bg-transparent z-20 cursor-pointer" aria-hidden="true" />
       </motion.div>
 
