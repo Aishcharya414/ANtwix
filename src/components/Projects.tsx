@@ -119,7 +119,6 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
   );
 };
 
-
 const ProjectCard = ({ project, index }: { project: Project; index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
