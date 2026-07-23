@@ -83,6 +83,7 @@ const ProjectPreview = ({ link, title }: { link: string; title: string }) => {
         )}
       </AnimatePresence>
       
+      
       <motion.div
         whileHover={{ scale: 1.05 }}
         className="w-full h-full relative"
