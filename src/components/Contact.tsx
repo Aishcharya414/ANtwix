@@ -28,7 +28,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 relative overflow-hidden bg-black border-t border-white/5">
+    <section id="contact" className="py-24 relative overflow-hidden bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <motion.h2
@@ -45,7 +45,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contactMethods.map((method, index) => (
             <motion.div
               key={index}

@@ -37,7 +37,7 @@ export default function Inquiry() {
   };
 
   return (
-    <section id="inquiry" className="py-32 relative overflow-hidden bg-black">
+    <section id="inquiry" className="py-15 relative overflow-hidden bg-black">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10" />
       

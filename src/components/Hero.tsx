@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Image from "next/image";
@@ -33,6 +34,8 @@ export default function Hero() {
               src="/logo-removebg.png"
               alt="ANtwix"
               fill
+              sizes="(max-width: 768px) 96px, 128px"
+              loading="eager"
               className="object-contain relative z-10"
               priority
             />
@@ -71,19 +74,17 @@ export default function Hero() {
           </motion.p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#projects"
+            <Link
+              href="/services"
               className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
             >
-              View Projects
+              View Services
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </motion.a>
+            </Link>
             <motion.a
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
-              href="#contact"
+              href="/#contact"
               className="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl backdrop-blur-xl transition-all text-lg"
             >
               Contact Us

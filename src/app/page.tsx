@@ -1,6 +1,8 @@
 ﻿import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
+import AboutUs from "@/components/AboutUs";
+import OurVision from "@/components/OurVision";
+import OurMission from "@/components/OurMission";
 import Inquiry from "@/components/Inquiry";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -10,7 +12,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-black text-white">
       <Navbar />
       <Hero />
-      <Projects />
+      <AboutUs />
+      <OurVision />
+      <OurMission />
       <Inquiry />
       <Contact />
       <Footer />

@@ -7,9 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/#about" },
+  { name: "Services", href: "/services" },
+  { name: "Our Vision", href: "/#vision" },
+  { name: "Our Mission", href: "/#mission" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -38,12 +42,14 @@ export default function Navbar() {
                 src="/logo-removebg.png"
                 alt="ANtwix Logo"
                 fill
+                sizes="80px"
+                loading="eager"
                 className="object-contain"
                 priority
               />
             </div>
             <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              ANtwix
+              ANtwix Technologies
             </span>
           </Link>
 
@@ -58,7 +64,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#inquiry"
+              href="/#inquiry"
               className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-gray-200 transition-all transform hover:scale-105"
             >
               Get a Quote
@@ -97,7 +103,7 @@ export default function Navbar() {
               ))}
               <div className="pt-4">
                 <Link
-                  href="#inquiry"
+                  href="/#inquiry"
                   className="block w-full text-center px-4 py-4 bg-white text-black font-bold rounded-xl"
                   onClick={() => setIsOpen(false)}
                 >

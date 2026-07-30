@@ -71,10 +71,14 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Home", href: "#" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-    { name: "Get a Quote", href: "#inquiry" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/#about" },
+    { name: "Services", href: "/services" },
+    { name: "Our Vision", href: "/#vision" },
+    { name: "Our Mission", href: "/#mission" },
+    { name: "Projects", href: "/projects" },
+    { name: "Contact", href: "/#contact" },
+    { name: "Get a Quote", href: "/#inquiry" },
   ];
 
   return (
@@ -93,6 +97,7 @@ export default function Footer() {
                   src="/logo-removebg.png"
                   alt="ANtwix Logo"
                   fill
+                  sizes="80px"
                   className="object-contain"
                 />
               </div>

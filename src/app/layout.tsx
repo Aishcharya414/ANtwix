@@ -84,14 +84,8 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <head>
-        <link rel="icon" href="/logo-removebg.png" sizes="any" type="image/png" />
-        <link rel="shortcut icon" href="/logo-removebg.png" />
-        <link rel="apple-touch-icon" href="/logo-removebg.png" />
-        <meta name="theme-color" content="#000000" />
-        <SchemaOrgData />
-      </head>
       <body className="min-h-full flex flex-col bg-black text-white">
+        <SchemaOrgData />
         {children}
         <FloatingWhatsApp />
       </body>
