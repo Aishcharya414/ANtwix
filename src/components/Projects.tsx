@@ -12,6 +12,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Event System - Event Demo system",
+    description: "Wedding & event photo-sharing app with guest uploads and a custom thank-you card generator.",
+    link: "https://event--system.vercel.app/",
+  },
+  {
     title: "Portfolio & Rate Card Platform - itsmechamith",
     description: "Built for content creator Chamith Dananjaya using React, Vite, Tailwind CSS, and Supabase. Includes role-based access control, RLS policies, Supabase Storage for media uploads, and an admin console for managing portfolio items, brand logos, and rate card packages.",
     link: "https://www.itsmechamith.lk/",
