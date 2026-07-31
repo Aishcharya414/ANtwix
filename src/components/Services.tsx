@@ -86,9 +86,6 @@ export default function Services() {
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-3">{service.title}</h2>
                 <p className="text-gray-400 leading-relaxed">{service.description}</p>
-                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text">
-                  Learn more <ArrowUpRight size={16} />
-                </div>
               </motion.article>
             );
           })}

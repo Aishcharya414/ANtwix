@@ -81,6 +81,13 @@ export default function Hero() {
               View Services
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
+            <Link
+              href="/projects"
+              className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
+            >
+              View Projects
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
             <motion.a
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
