@@ -73,7 +73,7 @@ export default function Hero() {
             We create responsive and modern websites for businesses and individuals, blending advanced technology with exceptional design.
           </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col items-center justify-center gap-6">
             <div className="flex items-center gap-8 px-8 py-4 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-xl">
               <div>
                 <p className="text-2xl font-black text-white">13</p>
@@ -85,21 +85,23 @@ export default function Hero() {
                 <p className="text-xs uppercase tracking-wider text-gray-400">Clients</p>
               </div>
             </div>
-            <Link
-              href="/projects"
-              className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
-            >
-              View Projects
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <motion.a
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
-              whileTap={{ scale: 0.95 }}
-              href="/#contact"
-              className="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl backdrop-blur-xl transition-all text-lg"
-            >
-              Contact Us
-            </motion.a>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/projects"
+                className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
+              >
+                View Projects
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <motion.a
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
+                whileTap={{ scale: 0.95 }}
+                href="/#contact"
+                className="px-10 py-4 border border-white/20 text-white font-bold rounded-2xl backdrop-blur-xl transition-all text-lg"
+              >
+                Contact Us
+              </motion.a>
+            </div>
           </div>
         </motion.div>
       </div>
