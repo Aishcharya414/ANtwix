@@ -12,6 +12,11 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Salon Website - D7 Bridal House",
+    description: "A modern and elegant website for D7 Bridal House, showcasing their services, portfolio and integrate booking system.",
+    link: "https://d7bridalhouse.lk/",
+  },
+  {
     title: "Event System - Event Demo system",
     description: "Wedding & event photo-sharing app with guest uploads and a custom thank-you card generator.",
     link: "https://event--system.vercel.app/",

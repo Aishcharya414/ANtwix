@@ -74,13 +74,17 @@ export default function Hero() {
           </motion.p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link
-              href="/services"
-              className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
-            >
-              View Services
-              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <div className="flex items-center gap-8 px-8 py-4 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-xl">
+              <div>
+                <p className="text-2xl font-black text-white">13</p>
+                <p className="text-xs uppercase tracking-wider text-gray-400">Projects</p>
+              </div>
+              <div className="h-10 w-px bg-white/15" />
+              <div>
+                <p className="text-2xl font-black text-white">8</p>
+                <p className="text-xs uppercase tracking-wider text-gray-400">Clients</p>
+              </div>
+            </div>
             <Link
               href="/projects"
               className="group flex items-center gap-2 px-10 py-4 bg-white text-black font-bold rounded-2xl hover:bg-gray-100 transition-all text-lg"
