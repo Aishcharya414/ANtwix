@@ -17,6 +17,11 @@ const projects: Project[] = [
     link: "https://d7bridalhouse.lk/",
   },
   {
+    title: "Company Website - Aquablu Lanka (Pvt) Ltd",
+    description: "A modern website for Aquablu Lanka (Pvt) Ltd, showcasing their services, projects and achievements.",
+    link: "https://aquablu-lanka.vercel.app/",
+  },
+  {
     title: "Event System - Event Demo system",
     description: "Wedding & event photo-sharing app with guest uploads and a custom thank-you card generator.",
     link: "https://event--system.vercel.app/",
